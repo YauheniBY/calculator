@@ -417,15 +417,15 @@ function toggleStylesFile() {
 
    const fileCss = document.getElementById('css');
 
-   if(fileCss.href.includes("/style.css")) {
+   if(fileCss.href.includes("style.css")) {
 
       
 
-      fileCss.href = fileCss.href.replace("/style.css","/main.css");
+      fileCss.href = fileCss.href.replace("style.css","main.css");
 
    } else {
       
-      fileCss.href = fileCss.href.replace("/main.css","/style.css");
+      fileCss.href = fileCss.href.replace("main.css","style.css");
 
    }
 
