@@ -6,5 +6,6 @@
 <li>Two variants of design on click "Change design"</li>
 <li>Changing the font size when filling the screen length</li>
 </ol>
-## You can try it here
-[DEMO on https://yauheniby.github.io/calculator/] (https://yauheniby.github.io/calculator/)
+<hr>
+<h2>You can try it here</h2>
+<a href="https://yauheniby.github.io/calculator/" target="_blank">DEMO calculator</a>
