@@ -32,13 +32,11 @@
 
 .calcscreen {
    height: 125px;
-   /* display: grid;
-   justify-items: end;
-   align-items: end; */
    line-height: 0;
    color: #fff;
    margin-bottom: 20px;
    position: relative;
+   overflow: hidden;
 }
 .calcscreen p{
    margin: 0;
