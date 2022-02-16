@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+.calculator {
+   width: 300px;
+   height: 500px;
+   box-sizing: border-box;
+   font-family: 'Manrope', sans-serif;
+   background-color: rgb(221, 221, 221);
+   box-shadow: 4px 4px 4px #a8a8a8;
+   border: 1px solid rgb(128, 128, 128);
+   margin: 30px auto;
+   position: relative;
+}
+
+.headline {
+   position: absolute;
+   left: 10px;
+   top: 10px;
+   font-weight: 200;
+   z-index: 1;
+   font-size: 0.9rem;    
+}
+.headline:hover{
+   cursor: pointer;
+}
+
+.calcscreen {
+   height: 165px;
+   line-height: 0;
+   color: rgb(61, 61, 61);
+   margin-bottom: 20px;
+   position: relative;
+}
+.calcscreen p{
+   margin: 0;
+   font-weight: 600;
+   font-size: 3.5rem;   
+   margin-bottom: 45px;
+   position: absolute;
+   text-align: right;
+   bottom: 0;
+   right: 0;
+   padding: 0 10px;
+}
+.calcscreen p::after {
+   width: 1px;
+   height: 50px;
+   background-color: rgb(75, 74, 74);
+   content: "";
+   margin-bottom: 20px;
+   display: block;
+   position: absolute;
+   right: 5px;
+   bottom: -45px;
+   animation-duration: 2s;
+   animation-name: twinkle;
+   animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+   from {
+     opacity: 1;
+   }
+   25%{
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   75%{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+ 
+   
+ }
+
+
+.calcscreen.active p::after {
+   display:none;
+}
+
+.calcscreen.miniFontSize p {
+   font-size: 2.5rem;
+}
+.calcscreen.microFontSize p {
+   font-size: 1.5rem;
+}
+
+
+.buttons{
+   display: grid;
+   grid-template-areas: 
+   "ac clear plusminus dilive"
+   "seven eight nine multiply"
+   "four five six minus"
+   "one two three multiplay"   
+   "zero zero dot equal";
+   grid-gap:1px;
+   justify-items: center;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+
+.btn {
+   width: 100%;
+   height: 100%;
+   color: rgb(27, 27, 27);
+   text-align: center;
+   line-height: 60px;
+   font-size: 1.8rem;
+   user-select:none;
+   cursor: pointer;
+}
+
+.btn:hover {
+   filter: brightness(130%);
+}
+.btn:active {
+   filter: brightness(80%);
+}
+
+.btn-grey {
+   background-color: rgb(245, 245, 245);
+}
+.btn-orange {
+   background-color: rgb(231, 231, 231);   
+   font-weight: 200;
+}
+
+.equal{
+   background-color: rgb(160, 174, 255);
+}
+
+.btn-white {
+   background-color: rgb(231, 231, 231);  
+   font-weight: 200;
+}
+.zero {
+   grid-area: zero;
+   width: 100%;
+}
